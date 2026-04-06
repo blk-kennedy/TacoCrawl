@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taco Crawl 2026</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b1d2d;
+      color: #f0f7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .board {
+      width: min(960px, 95%);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+      overflow: hidden;
+    }
+    .board-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      background: linear-gradient(135deg, #0f2e4c 0%, #1d496f 100%);
+      padding: 32px 36px;
+      align-items: center;
+    }
+    .board-header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: 0.08em;
+    }
+    .board-header p {
+      margin: 6px 0 0;
+      color: #b8d4ff;
+      font-size: 1rem;
+    }
+    .info-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 18px 24px;
+      text-align: right;
+    }
+    .info-card strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #aad1ff;
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .info-card span {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #07131f;
+    }
+    thead {
+      background: rgba(255,255,255,0.04);
+    }
+    th, td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-feature-settings: "tnum" 1;
+    }
+    th {
+      color: #99c6ff;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    td:nth-child(1) {
+      width: 32%;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    td:nth-child(2) {
+      width: 24%;
+      color: #a9d5ff;
+    }
+    td:nth-child(3) {
+      width: 22%;
+      color: #f9f9f9;
+      font-weight: 700;
+    }
+    td:nth-child(4) {
+      width: 22%;
+      text-align: right;
+      color: #8bd8ff;
+      font-weight: 600;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.03);
+    }
+    td.status-on-time {
+      color: #7CFC00 !important;
+    }
+    td.status-delay {
+      color: #FF4136 !important;
+    }
+    td.status-boarded {
+      color: #FFDC00 !important;
+    }
+    td.status-departed {
+      color: #A0A8B8 !important;
+      opacity: 0.75;
+    }
+    @media (max-width: 720px) {
+      .board-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      th, td {
+        padding: 14px 16px;
+      }
+      .info-card {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="board-header">
+      <div>
+        <h1>Taco Crawl 5/5/2026</h1>
+        <p>40 tacos for 40 years</p>
+      </div>
+      <div class="info-card">
+        <strong>Current Location</strong>
+        <span>Home</span>
+        <strong>Total</strong>
+        <span>0</span>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Tacos</th>
+          <th>ETA</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cxt Campustown</td>
+          <td>-</td>
+          <td>7:30 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Catrina's Express</td>
+          <td>-</td>
+          <td>8:00 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>El Mirador</td>
+          <td>-</td>
+          <td>8:35 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Outdoor workout EP</td>
+          <td>-</td>
+          <td>9:40 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>El Gallo</td>
+          <td>-</td>
+          <td>11:00 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Casa de Arte</td>
+          <td>-</td>
+          <td>11:45 AM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>El Habernero</td>
+          <td>-</td>
+          <td>1:00 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Panderia Ortiz</td>
+          <td>-</td>
+          <td>1:50 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Mi Familia</td>
+          <td>-</td>
+          <td>2:15 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Glen Oak Park</td>
+          <td>-</td>
+          <td>2:55 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Coco's</td>
+          <td>-</td>
+          <td>3:50 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Rudy's</td>
+          <td>-</td>
+          <td>4:25 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Taco Bell</td>
+          <td>-</td>
+          <td>5:15 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Pericos</td>
+          <td>-</td>
+          <td>5:35 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Mariachi</td>
+          <td>-</td>
+          <td>6:15 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>El Taco Loco</td>
+          <td>-</td>
+          <td>7:20 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Hacienda</td>
+          <td>-</td>
+          <td>8:05 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+        <tr>
+          <td>Casa Agave</td>
+          <td>-</td>
+          <td>8:15 PM</td>
+          <td class="status-on-time">On Time</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
